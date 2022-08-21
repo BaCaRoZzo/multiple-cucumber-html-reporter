@@ -170,7 +170,6 @@
     <% } %>
 
     <!-- Custom -->
-    <script src="../assets/js/Chart.style.js"></script>
     <script>
         var hideResult;
         var showAll;
@@ -180,6 +179,8 @@
                 legend: false,
                 responsive: false
             };
+
+            <%= genericScript %>
 
             new Chart(document.getElementById("scenario-chart"), {
                 type: 'doughnut',
@@ -207,8 +208,6 @@
                 },
                 options: scenarioOptions
             });
-
-            <%= genericScript %>
         });
     </script>
 </body>
